@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.wapper{
+    width: 100%;
+    
+  
+}
+
+header {
+    width: 100%;
+    height: 50px;
+   
+    font-size: 12px;
+}
+
+.left{
+    float: left;
+    padding-top: 15px;
+    margin-left: 20px;
+}
+.right{
+    float: right;
+    padding-top: 5px;
+    margin-right: 10px;
+}
+
+.right img {
+    vertical-align: middle;
+}
+
+.content{
+    background-color: white;
+    height: 300px;
+    width: 400px;
+    margin: 150px auto;
+}
+.logo img{
+    padding-left: 64px;
+    margin-bottom: 10px;
+}
+.mid{
+    height: 30px;
+    width: 100%;
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid rgb(220,220,220) ;
+}
+.search{
+    width: 80%;
+    height: 27px;
+    margin-left: 18px;
+    border: none;
+    float: left;
+    
+}
+a{
+    text-decoration: none;
+    color: rgb(41, 41, 41);
+
+}
+a:hover{
+    text-decoration: underline;
+}
+.scrimg {
+    float: left;
+    padding-left: 8px;
+    padding-top: 3px;
+}
+
+.micimg {
+    float: right;
+    margin-right: 5px;
+    margin-top: -17px;
+}
+.btn {
+    background-color:white;
+    margin: 15px auto;
+    padding-left: 4px;
+    width: 150px;
+}
+.btns{
+    border: none;
+    width: 80px;
+    height: 25px;
+    background-color: rgb(240,240,240);
+    font-size: 11px;
+
+}
+.btng{
+    border: none;
+    width: 50px;
+    height: 25px;
+    background-color: rgb(240,240,240);
+    font-size: 11px;
+}
+.tai{
+    background-color: rgb(240,240,240);
+    height: 32px;
+}
+.taiwan{
+    font-size: 11px;
+    padding-left: 14px;
+    padding-top: 8px;
+    border-top: 1px solid rgb(220,220,220) ;
+}
+.down{
+    background-color: rgb(240,240,240);
+    height: 32px;
+    border-top: 1px solid rgb(220,220,220) ;
+}
+.downL{
+    float: left;
+    font-size: 11px;
+    padding-left: 14px;
+    padding-top: 8px;
+}
+.downR{
+    float: right;
+    font-size: 11px;
+    padding-top: 8px;
+    padding-right: 8px;
+}
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}

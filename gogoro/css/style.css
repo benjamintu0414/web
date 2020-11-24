@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content{
+    background-color: rgb(248, 248, 248);
+}
+header{
+    width: 100%;
+    min-width: 760px;
+    background-color: transparent;
+    padding: 0 12%;
+    position: fixed;
+}
+header:hover{
+    background-color: rgb(18, 18, 21);
+}
+.color_transition{
+    transition: background-color 0.4s,color 0.4s;
+}
+.title{
+    min-width: 760px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.title img{
+    width: 100%;
+}
+.title li{
+    list-style: none;
+    float: left;
+}
+.title li a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+.title li a:hover{
+    color: rgb(1, 206, 244);
+}
+.title li:nth-child(7){
+    margin-left: 50px;
+}
+.viva{
+    width: 100%;
+    min-width: 760px;
+}
+.viva img {
+    width: 100%;
+    min-width: 760px;
+}
+.more{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -150px;
+}
+.more_margin{
+    background-color:transparent;
+    width: 100px;
+    height: 35px;
+}
+.p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.more p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.gogo{
+    float: left;
+    font-size: 40px;
+}
+.plus{
+    font-size: 40px;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+.little{
+    font-size: 18px;
+    font-weight: bolder;
+}
+.understand{
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    border: white 2px solid;
+    background-color: transparent;
+    color: white;
+    font-weight: bolder;
+}
+.understand:hover{
+    color: black;
+    background-color: white;
+}
+.pho{
+    width: 75%;
+    margin: 0 auto;
+    min-width: 760px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.pho img{
+    width: 100%;
+}
+.left{
+margin-left: 7px;
+}
+.up{
+    margin-top: 3px;
+}
+footer{
+    width: 100%;
+    min-width: 760px;
+    background-color: rgb(50, 50, 55);
+}
+.buy{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+}
+.com{
+    width: 170px;
+    height: 40px;
+    margin-left: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(115, 125, 130);
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.com:hover{
+    background-color: rgb(184, 187, 192);
+    color: black;
+}
+.tired{
+    height: 500px;
+    background-color: rgb(60,61,66);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tired_in{
+    width: 70%;
+    height: 500px;
+    display: flex;
+    flex: row;
+    justify-content: space-around;
+}
+.tiredul{
+    width: 200px;
+    margin-right: 100px;
+    margin-top: 30px;
+    color: white;
+    font-weight: bolder;
+    font-size: 24px;
+}
+.tiredul:hover{
+    color: rgb(1, 206, 244);
+}
+.tiredul li{
+    list-style: none;
+}
+.tiredul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 25px;
+    font-weight: bolder;
+    text-decoration: none;
+    color:rgb(115, 125, 130);
+    font-size: 14px;
+}
+.tiredul li a:hover{
+    color: rgb(185, 188,191);
+    text-decoration: underline;
+}
+.btn{
+    margin-top: 30px;
+    width: 150px;
+}
+.butt{
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin-right: 5px;
+    margin-top: 5PX;
+    background-color: transparent;
+}
+.butt img{
+    width: 40px;
+}
+.butt:hover{
+    background-color: rgb(240, 240, 240);
+
+}
+.over{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+.left{
+    color: rgb(180, 180, 180);
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mid{
+    display: flex;
+    flex-direction:row;
+}
+.mid li{
+    padding: 0 20px;
+    list-style: none;
+}
+.mid a{
+    color:rgb(115, 125, 130);
+    font-weight: bolder;
+    font-size: 12px;
+    text-decoration: none;
+}
+.mid a:hover{
+    color: rgb(185, 188,191);
+    text-decoration: underline;
+}
+.language{
+    width: 150px;
+    font-size: 14px;
+    background-color: rgb(50, 50, 55);;
+    border: none;
+    color: white;   
+}

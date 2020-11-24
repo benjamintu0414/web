@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color: rgb(49, 49, 49);
+    width: 100%;
+    height: 70px;
+    min-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.h_left{
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.h_left a{
+    display: flex;
+    justify-content: center;
+}
+.h_left img{
+    vertical-align: middle;
+    width: 80%;
+}
+.search {
+    background-color: rgb(36, 36, 36);
+    border: none;
+    border-radius: 100px;
+    height: 40px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search input{
+    height: 30px;
+    width: 180px;
+    border: none;
+    background-color: transparent;
+    padding-left: 10px;
+    color: rgb(235, 235, 235);
+}
+.search img{
+    width: 10%;
+}
+.h_right{   
+    width: 290px;
+}
+.title{
+    display: flex;
+    align-items: center;
+}
+.title img{
+    width: 18px;
+    vertical-align: middle;
+}
+.title li{
+    float: left;
+    list-style: none;
+    margin-left: 10px;
+    padding-right: 10px;
+    border-right: 1.5px solid  rgb(68, 68, 68);
+}
+.title li:nth-child(3){
+    border: none;
+}
+.title li a{
+    font-size: 15px;
+    color: rgb(132, 132, 132);
+}
+.title li a:hover{
+    text-decoration: underline;
+}
+.content{
+    width: 1515px;
+}
+.sildebar{
+    width: 214px;
+    float: left;
+}
+.purchase{
+    width:150px;
+    padding-top: 30px;
+    margin-left: 30px;
+    font-size: 13px;
+    color: rgb(190, 192, 199);
+    font-weight: bolder;
+}
+.purchase li{
+    list-style: none;
+    margin-top: 25px;
+}
+.purchase li:nth-child(1){
+    margin-top: 15px;
+}
+.purchase li a{
+    color: black;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.purchase li a:hover{
+    color:rgb(0, 184, 79);
+}
+.more{
+    padding-bottom: 30px;
+    border-bottom: 1px rgb(235, 235, 235) solid ;
+}
+.point{
+    padding-top: 5px;
+    padding-bottom: 20px;
+    border-bottom: 1px rgb(235, 235, 235) solid ;
+}
+.point img{
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.new{
+    padding-bottom: 20px;
+    border-bottom: 1px rgb(235, 235, 235) solid ;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.ti{
+    margin-top: 20px;
+    list-style: none;
+}
+.ti a{
+    color: rgb(100, 100, 100);
+    font-size: 14px;
+    font-weight: bolder;
+}
+.ti a:hover{
+    text-decoration: underline;
+}
+.in{
+    margin-top: 20px;
+    list-style: none;
+    padding-right: 5px;
+}
+.in a{
+    color: rgb(163, 163, 163);
+    font-size: 12px;
+}
+.in a:hover{
+    text-decoration: underline;
+}
+.question {
+    margin-left: 30px;
+}
+.right{
+    float: right;
+    border-left: 1px rgb(220, 220, 220) solid;
+}
+.photo{
+    width: 1300px;
+    height: 240px;
+    background-image: url(https://obs.line-scdn.net/0hCTqebUXBHHtMHDTZqsljLGZeBxUieEV-ICUMSSoCEEkyLFwkcS8HHD0dShw2fFJ_IHtRSjseERk1eVN_eHpTFWoUQExmKB4sIntQHWoaQQ/pc);
+}
+.sort{
+    width: 1050px;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.word{
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.word h2{
+    color: black;
+    font-size: 19px;
+}
+.word p{
+    color:rgb(163, 163, 163);
+    font-size: 13px;
+}
+.word:hover>p,
+.word:hover>h2{
+    text-decoration: underline;
+}
+.sticker{
+    width: 1050px;
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+}
+.sticker a{
+    color: black;
+    font-size: 18px; 
+}
+.sticker a:hover{
+    text-decoration: underline;
+}
+.intro{
+    width: 312px;
+    height: 122px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    border-right:  1px rgb(235, 235, 235) solid;
+}
+.intro img{
+    width: 120px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.recommend{
+    width: 100%;
+    border-bottom: rgb(235, 235, 235) 1px solid;
+}
+.official{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: rgb(235, 235, 235) 1px solid;
+}
+.theme{
+    width: 1050px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.theme a{
+    font-size: 16px;
+    color: rgb(163, 163, 163);
+}
+.theme a:hover{
+    text-decoration: underline;
+}
+.sort2{
+    display: flex;
+    justify-content: flex-start;
+}
+.word2{
+    margin-left: 40px;
+    width: 470px;
+}
+.detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.detail img{
+    width: 120px;
+    margin-bottom: 5px;
+}
+.account{
+    width: 1050px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.name{
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: rgb(34, 32, 32) 1px solid;
+}
+.name a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+}
+.name a:hover{
+    text-decoration: underline;
+}
+.name img{
+    border-radius: 100px;
+    width: 120px;
+    margin-bottom: 10px;
+}
+.name button{
+    margin-top: 10px;
+    width: 110px;
+    height: 34px;
+    border: none;
+    background-color: rgb(133, 160, 215);
+    font-size: 10px;
+    color: white;
+}
+.noline{
+    border: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    min-width: 1300px;
+    height: 68px;
+    border-top: 1px solid rgb(220, 220, 220);
+    background-color: rgb(247, 247, 252);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 25px;
+}
+.server{
+    display: flex;
+    flex-direction: row;
+}
+.server li{
+    list-style: none;
+    float:left;
+    padding: 0 10px;
+    border-right: 1px rgb(220, 220, 220) solid;
+}
+.server li a{
+    color: rgb(132, 132, 132);
+    font-size: 12px;
+}
+.server li a:hover{
+    text-decoration: underline;
+}
+.server p{
+    color: rgb(132, 132, 132);
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+.language{
+    width: 170px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: bolder;
+    padding-left: 10px;
+    border: 1px solid rgb(220, 220, 220);
+    background-color: white;
+    
+}
+.language option{
+    color: rgb(115, 115, 115);
+}
+

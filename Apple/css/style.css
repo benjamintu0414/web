@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    background-color: black;
+    min-width: 760px;
+    padding: 0px 12%;
+    height: 45px;
+    position: fixed;
+    opacity: 0.8;
+}
+.products{
+    background-color: black;
+    width: 52px;
+    height: 45px;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.products img{
+    width: 85%;
+    opacity: 0.8;
+    vertical-align: middle;
+}
+.products img:hover{
+    opacity: 1;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+li{
+    float: left;
+}
+li a{
+    text-decoration: none;
+    color: rgb(205, 205, 205);
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+li a:hover{
+    color: white;
+}
+.chinese{
+    width: 75px;
+}
+.pho{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+    min-width: 1024px;
+}
+.pho img{
+    width: 100%;
+}
+.ise2{
+    background-color: rgb(19, 19, 19);
+}
+.i11pro{
+    background-color: rgb(0, 0, 0);
+}
+.i11 {
+    background-color: rgb(250, 250, 250);
+}
+.mar10{
+    margin-right: 10px;
+}
+footer{
+   background-color: rgb(245, 245, 245); 
+   width: 100%;
+   min-width: 1024px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.color{
+    width:100%;
+    max-width: 1024px;
+    border-bottom: rgb(180, 180, 180) 1px solid;
+    padding: 15px 0;
+}
+.word{
+    font-size: 14px;
+    color: rgb(134, 134, 134); 
+}
+.link{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.title a{
+    color: rgb(90, 90, 90);
+    font-size: 10px;
+    line-height: 30px;
+}
+.title a:hover{
+    color: black;
+    text-decoration: black underline;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.left{
+    color: rgb(180, 180, 180);
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mid li{
+    border-right:0.5px rgb(134, 134, 134) solid;
+    padding: 0 10px;
+}
+.mid li:nth-child(5) {
+    border-right: none;
+}
+.sale a{
+    color: rgb(90, 90, 90);
+    font-size: 10px;
+    text-decoration: none;
+}
+.sale a:hover{
+    color: black;
+    text-decoration: black underline;
+}
+.right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.right img{
+    width: 25%;
+}
+

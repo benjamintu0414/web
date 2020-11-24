@@ -1,0 +1,585 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Microsoft JhengHei;
+}
+@media screen and (min-width:1024px){
+    body{
+        width: 100%;
+    }
+    .responsive{
+        display: none;
+    }
+    .wapper{
+        width: 100%;
+        min-width: 1024px;
+        display: flex;
+        flex-direction: row;
+    }
+    .sidebar{
+        width: 15%;
+        min-width: 160px;
+        height: 100%;
+        background-color: rgb(248, 248, 248);
+        position: fixed;
+        float: left;
+    }
+    .side-logo a{
+        list-style: none;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .side-logo img{
+        width: 60%;
+        min-width: 100px;
+    }
+    .side-ul li{
+        height: 45px;
+        list-style: none;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .side-ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    .word{
+        width: 100px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .arrow{
+        width: 40px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .side-ul li:hover{
+        background-color:rgb(248, 236, 227);
+    }
+    .side-bot{
+        margin-top: 25px;
+        padding-left: 35px;
+        display: flex;
+        flex-direction: column;
+    }
+    .icon{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    }
+    .icon li{
+        margin-left: 2px;
+        margin-bottom: 10px;
+    }
+    .icon li:nth-child(2){
+        margin-left: 15px;
+    }
+    .side-bot a:hover{
+        opacity: 0.6;
+        transition: opacity 0.4s;
+    }
+    .mainarea{
+        width: 85%;
+        float: right;
+    }
+    .nav{
+        min-width: 1024px;
+        height: 40px;
+        background-color: rgb(0, 166, 78);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-left{
+        width: 210px;
+        height: 40px;
+        background-color: rgb(252, 124, 46);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 40px;
+    }
+    .store{
+        display: flex;
+        flex-direction: row;
+    }
+    .store li{
+        list-style: none;
+        color: white;
+    }
+    .store li a{
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        font-weight: bolder;
+    }
+    .store li a:hover{
+        color: rgb(247, 252, 191);
+    }
+    .nav-right{
+        width: 223px;
+        height: 32px;
+        margin-right: 210px;
+    }
+    .nav-icon{
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-icon li{
+        list-style: none;
+        border-right:  white 0.2px solid;
+        margin-left: 12px;
+        padding-right: 12px;
+    }
+    .nav-icon li img{
+        width: 85%;
+    }
+    
+    .add img{
+        width: 100%;
+        min-width: 1180px;
+        margin-bottom: 30px;
+    }
+    .disney{
+        width: 92%;
+        min-width: 1188px;
+        margin: 0 auto;
+    }
+    .content-title p{
+        margin-bottom: 35px;
+        padding-top: 25px;
+        font-size: 28px;
+        color: red;
+    }
+    .disney-content{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .disney-content-video{
+        width: 100%;
+    }
+    .disney-content-im{
+        width: 300px;
+        margin-top: -2px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .disney-content-im a{
+        text-decoration: none;
+    }
+    .disney-content-im p{
+        width: 295px;
+    }
+    .intro{
+        font-size: 13px;
+        color: rgb(118, 118, 118);
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .time{
+        font-size: 13px;
+        color: rgb(234, 84, 21);
+    }
+    .disney-content-im:hover{
+        border: 2.5px solid rgb(252, 124, 46);
+    }
+    .eat{
+        width: 92%;
+        display: flex;
+        flex-direction: column;
+        margin: 50px auto;
+    }
+    .eat-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .in711{
+        width: 266px;
+        height: 340px;
+    }
+    .in711 a{
+        text-decoration: none;
+    }
+    .in711 p{
+        padding: 0 12px;
+        width: 265px;
+    }
+    .in711 img{
+        width: 261px;
+    }
+    .eat-name{
+        font-weight: bolder;
+        color: rgb(31, 31, 31);
+        font-size: 17px;
+        margin-top: 10px;
+    }
+    .in711:hover{
+        border: 2.5px solid rgb(252, 124, 46);
+    }
+    .news{
+        width: 92%;
+        min-width: 1190px;
+        margin: 0 auto;
+    }
+    .outline{
+        width: 100%;
+        height: 240px;
+        border-radius: 10px;
+        border: rgb(221, 221, 221) 1px solid;
+        box-shadow: rgb(200, 200, 200) 0 0 10px;
+        margin-bottom: 60px;
+    }
+    .news-content{
+        display: flex;
+        flex-direction: row;
+        height: 80px;
+        font-size: 18px;
+        border-bottom: 1px rgb(228, 228, 228) solid;
+    }
+    .news-content a{
+        margin: auto auto;
+        text-decoration: none;
+        color: black;
+        width: 950px;
+    }
+    .news-content a:hover{
+        color: red;
+    }
+    .app{
+        width: 100%;
+        height: 700px;
+        background-color: rgb(243, 243, 243);
+        color: rgb(90, 90, 90);
+        font-size: 20px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .app-block-in{
+        width: 400px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block-up{
+        width: 360px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 18px;
+        border-bottom: 1px solid rgb(90, 90, 90);
+    }
+    .block-down{
+        width: 350px;
+        display: flex;
+        flex-direction: row;
+        margin: 15px 0;
+        justify-content: space-around;
+    }
+    .counter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+        color: black;
+        text-decoration: none;
+    }
+    .counter:hover{
+        opacity: 0.6;
+        transition: opacity 0.4s;
+    }
+    .promote{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+    .promote-block{
+        width: 335px;
+        height: 450px;
+    }
+    .promote-block img{
+        width: 330px;
+        height: 340px;
+    }
+    .foot{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .foot-in{
+        width: 92%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+    .foot-in p{
+        color: rgb(80, 80, 80);
+        font-size: 12px;
+    }
+    .foot-right{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .foot-right-ul{
+        display: flex;
+        flex-direction: row;
+    }
+    .foot-right-ul li{
+        list-style: none;
+        border-right: solid 1px rgb(96, 96, 96);
+        margin-right: 5px;
+        padding-right: 5px;
+    }
+    .foot-right-ul li:nth-child(5){
+        border: none;
+    }
+    .foot-right-ul a{
+        text-decoration: none;
+        color: rgb(96, 96, 96);
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1023px){
+    .wapper{
+        width: 100%;
+        min-width: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar, .nav-left, .nav-right, .disney-content-im, .hide, .app, .promote, .foot-left{
+        display: none;
+    }
+    .nav{
+        width: 100%;
+        min-width: 500px;
+        height: 60px;
+        background-color: rgb(240, 240, 240);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav-left2{
+        height: 60px;
+        width: 55px;
+        background-color: rgb(0, 166, 78);
+        font-size: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+        color: white;
+    }
+    .nav-mid{
+        width: 130px;
+        display: flex;
+        align-items: center;
+    }
+    .nav-mid img{
+        width: 100%;
+    }
+    .nav-right2{
+        width: 110px;
+        display: flex;
+        flex-direction: row;
+    }
+    .location, .win{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-right2 img{
+        width: 70%;
+    }
+    .add img{
+        width: 100%;
+        min-width: 500px;
+    }
+    .disney-content{
+        min-width: 500px;
+    }
+    .content-title{
+        width: 100%;
+        min-width: 500px;
+        height: 50px;
+        color: white;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .orange{
+        background-color:rgb(255, 121, 13);
+    }
+    .red{
+        background-color: rgb(214, 0, 17);
+        margin: 20px 0;
+    }
+    .white{
+        color: red;
+        font-size: 26px;
+        border-bottom: red 2px solid;
+        margin: 20px 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .eat-content{
+        width: 100%;
+        min-width: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .in711{
+        width: 30%;
+        min-width: 170px;
+    }
+    .in711 a{
+        width: 30%;
+        text-decoration: none;
+    }
+    .in711 p{
+        width: 100%;
+        padding: 0 12px;
+        font-size: 11px;
+    }
+    .in711 img{
+        width: 100%;
+    }
+    .in711:hover{
+        border: 2.5px solid rgb(252, 124, 46);
+    }
+    .yellow{
+        margin: 20px 0;
+        background-color: rgb(253, 185, 0);
+    }
+    .news{
+        width: 92%;
+        min-width: 500px;
+        margin: 0 auto;
+    }
+    .outline{
+        width: 100%;
+        border-radius: 10px;
+        border: rgb(221, 221, 221) 1px solid;
+        box-shadow: rgb(200, 200, 200) 0 0 10px;
+        margin-bottom: 60px;
+    }
+    .news-content{
+        display: flex;
+        flex-direction: row;
+        height: 70px;
+        font-size: 16px;
+        border-bottom: 1px rgb(228, 228, 228) solid;
+    }
+    .news-content a{
+        margin: auto auto;
+        text-decoration: none;
+        color: black;
+        width: 85%;
+    }
+    .news-content a:hover{
+        color: red;
+    }
+    .resapp{
+        width: 100%;
+        min-width: 500px;
+        height: 300px;
+        background-color: rgb(243, 243, 243);   
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;     
+    }
+    .fbig{
+        width: 65%;
+        min-width: 500px;
+        height: 70px;
+        border-radius: 10px;
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .fb711{
+        background-color: rgb(57, 87, 155);
+    }
+    .ig711{
+        background-color: rgb(180, 52, 135);
+    }
+    .open711{
+        background-color: rgb(0, 101, 181);
+    }
+    .res-promote{
+        width: 100%;
+        min-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .res-promote img{
+        width: 100%;
+        min-width: 500px;
+        margin: 0 auto;
+    }
+    .res-open{
+        width: 92%;
+    }
+    .foot{
+        width: 100%;
+        min-width: 500px;
+        background-color: rgb(208, 208, 208);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+    }
+    .foot-in{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .foot-in p{
+        color: rgb(80, 80, 80);
+    }
+    .foot-right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .foot-right-ul{
+        display: flex;
+        flex-direction: row;
+    }
+    .foot-right-ul li{
+        list-style: none;
+        border-right: solid 1px rgb(96, 96, 96);
+        margin-right: 5px;
+        padding-right: 5px;
+    }
+    .foot-right-ul li:nth-child(5){
+        border: none;
+    }
+    .foot-right-ul a{
+        text-decoration: none;
+        color: rgb(96, 96, 96);
+    }
+
+}

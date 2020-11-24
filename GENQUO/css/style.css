@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sticky{
+    position: sticky;
+    width: 100%;
+    min-width: 1170px;
+    top: 0px;
+    background-color: white;
+}
+.sent{
+    width: 100%;
+    min-width: 1170px;
+}
+.sent img{
+    width: 100%;
+    min-width: 1170px;
+}
+.left{
+    width: 100%;
+    min-width: 800px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left img{
+    width: 50%;
+    margin-left: 90px;
+    margin-bottom: 15px;
+}
+.sex{
+    display: flex;
+    flex-direction: row;
+}
+.sex li{
+    list-style: none;
+    margin-right: 20px;
+    border-radius: 2px;
+}
+.sex li a{
+    padding: 0 15px;
+    height: 8px;
+    padding-top: 4px;
+    display: flex;
+    justify-content: center;
+    text-decoration:none;
+    color: rgb(105, 114, 89);
+    font-size: 12px;
+}
+.sex li:hover{
+    background-color: rgb(236, 236, 236);
+}
+.women::before{
+    height: 8px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    text-decoration:none;
+    color: rgb(105, 114, 89);
+    font-size: 12px;
+    content: "WOMEN";
+}
+.women:hover::before{
+    content: "女裝";
+}
+.men::before{
+    height: 8px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    text-decoration:none;
+    color: rgb(105, 114, 89);
+    font-size: 12px;
+    content: "MEN";
+}
+.men:hover::before{
+    content: "男裝";
+}
+.kids::before{
+    height: 8px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    text-decoration:none;
+    color: rgb(105, 114, 89);
+    font-size: 12px;
+    content: "KIDS";
+}
+.kids:hover::before{
+    content: "孩童";
+}
+.search{
+    width: 100px;
+    float:right;
+    display: flex;
+    flex-direction: column;
+    margin-top: -65px;
+    margin-right: 10%;
+}
+.search img{
+    width: 20px;
+}
+.search input{
+    width: 60px;
+    background-color: transparent;
+    border: none;
+    border-bottom:1px rgb(105, 114, 89) solid;
+}
+.down{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.login::before{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    text-decoration:none;
+    color: rgb(105, 114, 89);
+    font-size: 10px;
+    content: "LOGIN";
+}
+.login:hover::before{
+    content: "登入";
+}
+.content{
+    width: 100%;
+    min-width: 1170px;
+    background-color: rgb(246, 240, 235);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content img{
+    width: 100%;
+    margin: 0 auto;
+}
+footer{
+    background-color: rgb(105, 114, 89);
+    width: 100%;
+    min-width: 1170px;
+    font-size: 12px;
+    color: rgb(223, 223, 223);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.footer_in{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1170px;
+}
+.footer_left{
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+.footer_left ul{
+    width: 650px;
+}
+.footer_left li{
+    list-style: none;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+.footer_left li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(223, 223, 223);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer_left li a:hover{
+    color: white;
+}
+.normal{
+    line-height: 24px;
+}
+.large{
+    font-size: 24px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+.twobr{
+    margin-bottom: 40px;
+}
+.footer_right{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    width:520px;
+}
+.bigger{
+    font-size: 16px;
+    width: 80%;
+    min-width: 500px;
+}
+.email{
+    margin: 15px 0;
+}
+.email input{
+    background-color: transparent;
+    border: white 1px solid;
+    width: 350px;
+    height: 40px;
+    margin-right: 10px;
+}
+.email ::placeholder{
+    padding-left: 20px;
+    color: rgb(117, 117, 117);
+}
+.email button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: rgb(223, 223, 223);
+    color: rgb(117, 117, 117);
+    font-size: 16px;
+}
+.email button:hover{
+    background-color: white;
+}
+.butt{
+    width: 40px;
+    border: none;
+    margin-left: -5px;
+    margin-top: 40px;
+    background-color: transparent;
+}
+.butt img{
+    width: 20px;
+    opacity: 0.7;
+}
+.butt img:hover{
+    opacity: 1;
+}

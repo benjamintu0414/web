@@ -1,0 +1,122 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(240, 240, 240);
+    
+}
+.content{
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    margin: 100px auto;
+    border: 1.5px rgb(220, 220, 220) solid;
+    border-radius: 4px;
+    
+}
+.logo img{
+    margin-left:57px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.checkin{
+    background-color: white;
+}
+input.account{
+    width: 270px;
+    height: 30px;
+    margin: 5px 36px;
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+    border: 1.3px rgb(220, 220, 220) solid;
+
+}
+
+
+.going{
+    width: 278px;
+    height: 35px;
+    margin-top: 15px;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    background-color: rgb(0, 149, 246);
+    border: 1.5px rgb(45, 145, 233) solid;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.left{
+    
+    width: 100px;
+    height: 20px;
+    float: left;
+    margin-top: 6px;
+    border-top: 1.5px rgb(220, 220, 220) solid;
+    margin-left: 40px;
+    margin-right: 23px;
+}
+.right{
+    
+    width: 100px;
+    height: 20px;
+    float: right;
+    margin-top: -13px;
+    border-top: 1.5px rgb(220, 220, 220) solid;
+    margin-right: 40px;
+}
+.or{
+    font-size: 18px;
+    font-weight: bolder;
+    color: rgb(150, 150, 150);
+}
+.btn{
+    background-color: white;
+    margin-top: 20px;
+    padding-left: 73px;
+}
+.fbin{
+    background-color: white;
+    font-size: 15px;
+    border: none;
+    font-weight: bolder;
+    color: rgb(56, 81, 133);
+    margin-top: 1px;
+}
+.fb{
+    vertical-align: bottom;
+    margin-right: 3px;
+}
+.forget{
+    background-color: white;
+    border: none;
+    margin: 20px 72px;
+    color: rgb(56, 81, 133);
+}
+.down{
+    width: 350px;
+    height: 60px;
+    background-color: white;
+    margin: -90px auto;
+    border: 1.5px rgb(220, 220, 220) solid;
+    border-radius: 4px;
+}
+.noacc{
+    float: left;
+    margin-top: 20px;
+    margin-left: 105px;
+    font-size: 15px;
+}
+.reg{
+    background-color: white;
+    border: none;
+    color: rgb(30, 161, 247);
+    font-weight: bolder;
+    font-size: 15px;
+    margin-top: 20px;
+
+}
