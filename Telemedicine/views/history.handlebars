@@ -1,0 +1,64 @@
+<head>
+    <link rel="stylesheet" href="/stylesheets/history_style.css" type="text/css">
+</head>
+<body onload="his_init()">
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar_in side_action">
+                <a href="/"><img class="opacity_transition" src="/img/real.png" alt=""></a>
+            </div>
+            <div class="sidebar_in side_original His-sidebar_in">
+                <a href="history"><img src="/img/history green.png" alt=""></a>
+            </div>
+        </div>
+        <div class="His-content">
+            <div class="header">
+                <div class="title main_t">歷史資料</div>
+                <div class="title sec_t">Histroy data</div>
+            </div>
+            <div class="His-information">
+                <div class="His-date">
+                    <form method="POST" id="sear_db" action="search_db">
+                        <div id="his_choose_pt" class="choosept" data-pt_num="{{ptNum}}">病患選取：
+                            <select name="his_pt_id" class="his_chose_pt" id="js_his_chosept" required/>
+                                <option value="">請選擇病患ID</option>
+                            </select>
+                        </div>
+                        <div class="bookdate">起始日期：
+                            <input name="start" id="start_date" type="date" value="2021-07-01" min="2021-07-01" >
+                        </div>
+                        <div class="bookdate">結束日期：
+                            <input name="end" id="end_date" type="date" value="2021-07-01" min="2021-07-01" >
+                        </div>
+                        <label id="js_his_date_err" class="check_label"></label>
+                        <button id="js_his_searbut" type="button" onclick="search()">查詢</button>
+                    </form>
+                </div>
+                <div id="js_his_chart" class="His-data_dis" data-pt_history="{{response}}">
+                    <table>
+                        <tr>
+                            <th>心律</th>
+                            <th>舒張壓</th>
+                            <th>收縮壓</th>
+                            <th>血氧</th>
+                            <th>日期時間</th>
+                        </tr>
+                        {{#each response}}
+                        <tr>
+                            <td>{{this.HeartRate}}</td>
+                            <td>{{this.DiastolicBlood}}</td>
+                            <td>{{this.SystolicBlood}}</td>
+                            <td>{{this.SPO2}}</td>
+                            <td class="his_td_date">{{this.Date}}</td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                    <canvas id="history" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="javascripts/historyjs.js"></script>
+</body>  
+        

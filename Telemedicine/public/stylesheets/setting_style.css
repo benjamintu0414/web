@@ -1,0 +1,301 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Microsoft JhengHei;
+}
+.content{
+    width: 1446px;
+    min-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper{
+    background-color: rgb(20, 22, 30);
+    width: 100%;
+    min-width: 1446px;
+    height: 100%;
+    min-width: 650px;
+    display: flex;
+    flex-direction: row;
+}
+.sidebar{
+    width: 85px;
+    min-width: 85px;
+    height: 100vh;
+    background-color: rgb(30, 33, 43);
+    border-right: 2.5px solid rgb(40, 42, 53);
+    position: sticky;
+    top: 0px;
+}
+.sidebar_in{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90px;
+}
+.side_original{
+    background-color: rgb(20, 22, 30);
+    border-bottom: 2.5px solid rgb(40, 42, 53);
+}
+
+.side_original img{
+    width: 50px;
+}
+.side_action{
+    background-color: rgb(30, 33, 43);
+}
+.side_action img{
+    width: 50px;
+    opacity: 0.7;
+}
+.side_action img:hover{
+    transition: opacity 0.2s,color 0.2s;
+    opacity: 1;
+}
+.header{
+    width: 90%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+}
+.title{
+    font-weight: bolder;
+    height: 70px;
+    opacity: 0.5;  
+}
+.main_t{
+    font-size: 56px;
+    color: white;
+}
+.sec_t{
+    font-size: 28px;
+    color: rgb(12, 187, 53);
+    display: flex;
+    align-items: flex-end;
+}
+/*--------------------*/
+.information{
+    width: 90%;
+    height: 630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.information_RWD{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    opacity: 0.4;
+}
+.inf_block{
+    width: 280px;
+    height: 290px;
+    background-color: rgb(36, 38, 49);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.pt_information{
+    border-bottom: 2px solid rgb(50, 52, 63);
+    display: flex;
+    flex-direction: row;
+    font-weight: bolder;
+}
+.pt_inf{
+    width: 140px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.display_multi-user{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.block_text{
+    width: 95px;
+    height: 125px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.block_text2{
+    width: 110px;
+    height: 125px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.block_zh{
+    font-size: 15px;
+    color: white;
+}
+.block_en{
+    font-size: 8px;
+    color: rgb(12, 187, 53);
+}
+.block_data{
+    font-size: 15px;
+    color: rgb(12, 187, 53)
+}
+.circle{
+    width: 65px;
+    height: 65px;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.data_dis{
+    width: 58px;
+    height: 58px;
+    background-color: rgb(36, 38, 49);
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+}
+/*--------css圈圈的顏色 之後這邊要刪掉---------*/
+.heat{
+    background-color: #7fff00;
+}
+.breathe{
+    background-color:#ff6600;
+}
+.oxygen{
+    background-color:#ff0000;
+}
+/*-------------------*/
+.setting{
+    width: 910px;
+    height: 520px;
+    position:absolute;
+    top: 160px;
+    left: 305px;
+    opacity: 1;
+    background-color: rgb(41, 43, 54);
+    border: 2.5px solid rgb(25, 27, 35);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.set_pt_information{
+    border-bottom: 3px solid rgb(55, 57, 68);
+    display: flex;
+    flex-direction: row;
+    font-weight: bolder;
+}
+.set_pt_inf{
+    width: 140px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.set_warning{
+    width: 90%;
+    height: 75px;
+    font-weight: bolder;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.set_block_zh{
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.set_block_data{
+    font-size: 20px;
+    color: rgb(12, 187, 53)
+}
+.set_block_en{
+    font-size: 14px;
+    color: rgb(12, 187, 53);
+}
+.setting_data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.data_input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+.data_input input{
+    background-color: rgb(81, 83, 94);
+    height: 30px;
+    width: 140px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bolder;
+    color: white;
+    padding-left: 10px;
+}
+::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+.dis_color{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin-right: 8px;
+}
+.set_orange{
+    background-color:#ff6600;
+}
+.set_red{
+    background-color:#ff0000;
+}
+.confirm{
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.confirm button{
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bolder;
+}.confirm button:hover{
+    opacity: 0.7;
+    transition: opacity 0.2s,color 0.2s;
+}
+.but_confirm{
+    font-size: 20px;
+    color: rgb(12, 187, 53);
+}
+.but_cancel{
+    font-size: 20px;
+    color: black;
+}

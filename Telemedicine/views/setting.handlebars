@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemedicine</title>
+    <link rel="stylesheet" href="stylesheets/setting_style.css" type="text/css">
+    <link rel="icon" href="img/smart-watch.png" type="img/icon">
+</head>
+<body onload="warningcolor()">
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar_in side_original">
+                <a href="#"><img src="img/real green.png" alt=""></a>
+            </div>
+            <div class="sidebar_in side_action">
+                <a href="history.html"><img class="opacity_transition" src="img/history.png" alt=""></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header">
+                <div class="title main_t">即時數據</div>
+                <div class="title sec_t">Real-time data</div>
+            </div>
+            <div class="information">
+                <div class="information_RWD inf_RWD1">
+                    <a href="setting.html" class="inf_block">
+                        <div class="pt_information">
+                            <div class="pt_inf">
+                                <div class="block_zh">姓名</div>
+                                <div class="block_data" id="js_pt_name">：病人</div>
+                            </div>
+                            <div class="pt_inf">
+                                <div class="block_zh">床號</div> 
+                                <div class="block_data" id="js_pt_id">：123</div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">呼吸</div> 
+                                <div class="block_en">Breathe</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血壓</div> 
+                                <div class="block_en">Blood pressure</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">步數</div> 
+                                <div class="block_en">Step frequency</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血氧</div> 
+                                <div class="block_en">Blood oxygen</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">心律</div> 
+                                <div class="block_en">Heart rate</div>
+                                <div class="circle heat" id="js_heat_color">
+                                    <div class="data_dis" id="js_heat_value">76</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a> 
+                    <a href="setting.html" class="inf_block">
+                        <div class="pt_information">
+                            <div class="pt_inf">
+                                <div class="block_zh">姓名</div>
+                                <div class="block_data" id="js_pt_name">：病人</div>
+                            </div>
+                            <div class="pt_inf">
+                                <div class="block_zh">床號</div> 
+                                <div class="block_data" id="js_pt_id">：123</div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">呼吸</div> 
+                                <div class="block_en">Breathe</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血壓</div> 
+                                <div class="block_en">Blood pressure</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">步數</div> 
+                                <div class="block_en">Step frequency</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血氧</div> 
+                                <div class="block_en">Blood oxygen</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">心律</div> 
+                                <div class="block_en">Heart rate</div>
+                                <div class="circle heat" id="js_heat_color">
+                                    <div class="data_dis" id="js_heat_value">76</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="setting.html" class="inf_block">
+                        <div class="pt_information">
+                            <div class="pt_inf">
+                                <div class="block_zh">姓名</div>
+                                <div class="block_data" id="js_pt_name">：病人</div>
+                            </div>
+                            <div class="pt_inf">
+                                <div class="block_zh">床號</div> 
+                                <div class="block_data" id="js_pt_id">：123</div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">呼吸</div> 
+                                <div class="block_en">Breathe</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血壓</div> 
+                                <div class="block_en">Blood pressure</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">步數</div> 
+                                <div class="block_en">Step frequency</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血氧</div> 
+                                <div class="block_en">Blood oxygen</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">心律</div> 
+                                <div class="block_en">Heart rate</div>
+                                <div class="circle heat" id="js_heat_color">
+                                    <div class="data_dis" id="js_heat_value">76</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="setting.html" class="inf_block">
+                        <div class="pt_information">
+                            <div class="pt_inf">
+                                <div class="block_zh">姓名</div>
+                                <div class="block_data" id="js_pt_name">：病人</div>
+                            </div>
+                            <div class="pt_inf">
+                                <div class="block_zh">床號</div> 
+                                <div class="block_data" id="js_pt_id">：123</div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">呼吸</div> 
+                                <div class="block_en">Breathe</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血壓</div> 
+                                <div class="block_en">Blood pressure</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">步數</div> 
+                                <div class="block_en">Step frequency</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血氧</div> 
+                                <div class="block_en">Blood oxygen</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">心律</div> 
+                                <div class="block_en">Heart rate</div>
+                                <div class="circle heat" id="js_heat_color">
+                                    <div class="data_dis" id="js_heat_value">76</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="setting.html" class="inf_block">
+                        <div class="pt_information">
+                            <div class="pt_inf">
+                                <div class="block_zh">姓名</div>
+                                <div class="block_data" id="js_pt_name">：病人</div>
+                            </div>
+                            <div class="pt_inf">
+                                <div class="block_zh">床號</div> 
+                                <div class="block_data" id="js_pt_id">：123</div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">呼吸</div> 
+                                <div class="block_en">Breathe</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血壓</div> 
+                                <div class="block_en">Blood pressure</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">步數</div> 
+                                <div class="block_en">Step frequency</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血氧</div> 
+                                <div class="block_en">Blood oxygen</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">心律</div> 
+                                <div class="block_en">Heart rate</div>
+                                <div class="circle heat" id="js_heat_color">
+                                    <div class="data_dis" id="js_heat_value">76</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="information_RWD inf_RWD1">
+                    <a href="setting.html" class="inf_block">
+                        <div class="pt_information">
+                            <div class="pt_inf">
+                                <div class="block_zh">姓名</div>
+                                <div class="block_data" id="js_pt_name">：病人</div>
+                            </div>
+                            <div class="pt_inf">
+                                <div class="block_zh">床號</div> 
+                                <div class="block_data" id="js_pt_id">：123</div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">呼吸</div> 
+                                <div class="block_en">Breathe</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血壓</div> 
+                                <div class="block_en">Blood pressure</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">步數</div> 
+                                <div class="block_en">Step frequency</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血氧</div> 
+                                <div class="block_en">Blood oxygen</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">心律</div> 
+                                <div class="block_en">Heart rate</div>
+                                <div class="circle heat" id="js_heat_color">
+                                    <div class="data_dis" id="js_heat_value">76</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a> 
+                    <a href="setting.html" class="inf_block">
+                        <div class="pt_information">
+                            <div class="pt_inf">
+                                <div class="block_zh">姓名</div>
+                                <div class="block_data" id="js_pt_name">：病人</div>
+                            </div>
+                            <div class="pt_inf">
+                                <div class="block_zh">床號</div> 
+                                <div class="block_data" id="js_pt_id">：123</div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">呼吸</div> 
+                                <div class="block_en">Breathe</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血壓</div> 
+                                <div class="block_en">Blood pressure</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">步數</div> 
+                                <div class="block_en">Step frequency</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血氧</div> 
+                                <div class="block_en">Blood oxygen</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">心律</div> 
+                                <div class="block_en">Heart rate</div>
+                                <div class="circle heat" id="js_heat_color">
+                                    <div class="data_dis" id="js_heat_value">76</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="setting.html" class="inf_block">
+                        <div class="pt_information">
+                            <div class="pt_inf">
+                                <div class="block_zh">姓名</div>
+                                <div class="block_data" id="js_pt_name">：病人</div>
+                            </div>
+                            <div class="pt_inf">
+                                <div class="block_zh">床號</div> 
+                                <div class="block_data" id="js_pt_id">：123</div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">呼吸</div> 
+                                <div class="block_en">Breathe</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血壓</div> 
+                                <div class="block_en">Blood pressure</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">步數</div> 
+                                <div class="block_en">Step frequency</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血氧</div> 
+                                <div class="block_en">Blood oxygen</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">心律</div> 
+                                <div class="block_en">Heart rate</div>
+                                <div class="circle heat" id="js_heat_color">
+                                    <div class="data_dis" id="js_heat_value">76</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="setting.html" class="inf_block">
+                        <div class="pt_information">
+                            <div class="pt_inf">
+                                <div class="block_zh">姓名</div>
+                                <div class="block_data" id="js_pt_name">：病人</div>
+                            </div>
+                            <div class="pt_inf">
+                                <div class="block_zh">床號</div> 
+                                <div class="block_data" id="js_pt_id">：123</div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">呼吸</div> 
+                                <div class="block_en">Breathe</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血壓</div> 
+                                <div class="block_en">Blood pressure</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">步數</div> 
+                                <div class="block_en">Step frequency</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血氧</div> 
+                                <div class="block_en">Blood oxygen</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">心律</div> 
+                                <div class="block_en">Heart rate</div>
+                                <div class="circle heat" id="js_heat_color">
+                                    <div class="data_dis" id="js_heat_value">76</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="setting.html" class="inf_block">
+                        <div class="pt_information">
+                            <div class="pt_inf">
+                                <div class="block_zh">姓名</div>
+                                <div class="block_data" id="js_pt_name">：病人</div>
+                            </div>
+                            <div class="pt_inf">
+                                <div class="block_zh">床號</div> 
+                                <div class="block_data" id="js_pt_id">：123</div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">呼吸</div> 
+                                <div class="block_en">Breathe</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血壓</div> 
+                                <div class="block_en">Blood pressure</div>
+                                <div class=" circle breathe" id="js_breathe_color">
+                                    <div class="data_dis" id="js_breathe_value">24</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">步數</div> 
+                                <div class="block_en">Step frequency</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display_multi-user">
+                            <div class="block_text">
+                                <div class="block_zh">血氧</div> 
+                                <div class="block_en">Blood oxygen</div>
+                                <div class=" circle oxygen" id="js_oxygen_color">
+                                    <span class="data_dis" id="js_oxygen_value">72</span>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div class="block_zh">心律</div> 
+                                <div class="block_en">Heart rate</div>
+                                <div class="circle heat" id="js_heat_color">
+                                    <div class="data_dis" id="js_heat_value">76</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div> 
+            </div>
+        </div>
+        <div class="setting">
+            <div class="set_pt_information">
+                <div class="set_pt_inf">
+                    <div class="set_block_zh">姓名：</div>
+                    <div class="set_block_data" id="js_pt_name">病人</div>
+                </div>
+                <div class="set_pt_inf">
+                    <div class="set_block_zh">床號：</div> 
+                    <div class="set_block_data" id="js_pt_id">123</div>
+                </div>
+            </div>
+            <div class="set_warning">
+                <div class="set_block_zh">心律
+                    <div class="set_block_en">Heart rate</div>
+                </div> 
+                <div class="setting_data">
+                    <div class="data_input">
+                        <div class="dis_color set_orange"></div>
+                        <input type="text" placeholder="警示值1">～
+                        <input type="text" placeholder="警示值1">
+                    </div>
+                    <div class="data_input">
+                        <div class="dis_color set_red"></div>
+                        <input type="text" placeholder="警示值2">～
+                        <input type="text" placeholder="警示值2">
+                    </div>
+                </div>
+            </div>
+            <div class="set_warning">
+                <div class="set_block_zh">呼吸
+                    <div class="set_block_en">Breathe</div>
+                </div> 
+                <div class="setting_data">
+                    <div class="data_input">
+                        <div class="dis_color set_orange"></div>
+                        <input type="text" placeholder="警示值1">～
+                        <input type="text" placeholder="警示值1">
+                    </div>
+                    <div class="data_input">
+                        <div class="dis_color set_red"></div>
+                        <input type="text" placeholder="警示值2">～
+                        <input type="text" placeholder="警示值2">
+                    </div>
+                </div>
+            </div><div class="set_warning">
+                <div class="set_block_zh">血氧
+                    <div class="set_block_en">Blood oxgyen</div>
+                </div> 
+                <div class="setting_data">
+                    <div class="data_input">
+                        <div class="dis_color set_orange"></div>
+                        <input type="text" placeholder="警示值1">～
+                        <input type="text" placeholder="警示值1">
+                    </div>
+                    <div class="data_input">
+                        <div class="dis_color set_red"></div>
+                        <input type="text" placeholder="警示值2">～
+                        <input type="text" placeholder="警示值2">
+                    </div>
+                </div>
+            </div><div class="set_warning">
+                <div class="set_block_zh">血壓
+                    <div class="set_block_en">Blood pressure</div>
+                </div> 
+                <div class="setting_data">
+                    <div class="data_input">
+                        <div class="dis_color set_orange"></div>
+                        <input type="text" placeholder="警示值1">～
+                        <input type="text" placeholder="警示值1">
+                    </div>
+                    <div class="data_input">
+                        <div class="dis_color set_red"></div>
+                        <input type="text" placeholder="警示值2">～
+                        <input type="text" placeholder="警示值2">
+                    </div>
+                </div>
+            </div><div class="set_warning">
+                <div class="set_block_zh">步數
+                    <div class="set_block_en">Step frequency</div>
+                </div> 
+                <div class="setting_data">
+                    <div class="data_input">
+                        <div class="dis_color set_orange"></div>
+                        <input type="text" placeholder="警示值1">～
+                        <input type="text" placeholder="警示值1">
+                    </div>
+                    <div class="data_input">
+                        <div class="dis_color set_red"></div>
+                        <input type="text" placeholder="警示值2">～
+                        <input type="text" placeholder="警示值2">
+                    </div>
+                </div>
+            </div>
+            <div class="confirm">
+                <button class="but_confirm" type="button" onclick="">確認</button>
+                <button class="but_cancel" type="button" onclick="history.back()">取消</button>
+            </div>
+        </div>
+    </div>
+    <script src="javascripts/indexjs.js"></script>
+</body>
+</html>
+    

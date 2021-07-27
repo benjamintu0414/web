@@ -1,0 +1,263 @@
+<link rel="stylesheet" href="stylesheets/index_style.css" type="text/css">
+</head>
+
+<body onload="init()">
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar_in side_original">
+                <a href="/"><img src="img/real green.png" alt=""></a>
+            </div>
+            <div class="sidebar_in side_action">
+                <a href="history"><img class="opacity_transition" src="img/history.png" alt=""></a>
+            </div>
+        </div>
+        <div class="content" id="js_backgroundcolor">
+            <div class="header">
+                <div id="js_getpt" class="title main_t" data-ptnum="{{ptNum}}">即時數據</div>
+                <div class="title sec_t">Real-time data</div>
+            </div>
+            <div class="information">
+                <div class="information_RWD">
+                    {{#each add_count}}
+                    <div class="inf_block" id="js_inf_block">
+                        <form class="pt_information">
+                            <div class="pt_inf">
+                                <div class="block_zh">姓名：</div>
+                                <div class="block_data" id="js_pt_name">{{this.pt_name}}</div>
+                            </div>
+                            <div class="pt_inf pt_num">
+                                <div class="block_zh">編號：</div>
+                                <div class="block_data" id="js_pt_id">{{this.ID}}</div>
+                            </div>
+                            <button class="setting_icon" type="button" onclick="setting_dis(this)" value="{{this.ID}}"
+                                name="{{this.pt_name}}"><img src="img/settings.png" alt=""></button>
+                            <button class="minus" type="submit" formaction="pt_minus/{{this.ID}}"><img
+                                    src="img/close.png" alt=""></button>
+
+                        </form>
+                        <button class="display_multi-user" onclick="chart_dis(this); chart(this);" value="{{this.ID}}"
+                            name="{{this.pt_name}}">
+                            <div class="block_text">
+                                <div id="{{this.ID}}_heart_rem_value" data-heartrem_s="{{this.heart_rem_s}}"
+                                    data-heartrem_e="{{this.heart_rem_e}}" class="block_zh">心律</div>
+                                <div id="{{this.ID}}_heart_warn_value" data-heartwarn_s="{{this.heart_warn_s}}"
+                                    data-heartwarn_e="{{this.heart_warn_e}}" class="block_en"></div>
+                                <div class="circle heat" id="{{this.ID}}_js_heat_color">
+                                    <div class="data_dis" id="{{this.ID}}_js_heat_value" name="Heart rate{{this.ID}}">
+                                        120</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div id="{{this.ID}}_breathe_rem_value" data-breatherem_s="{{this.breathe_rem_s}}"
+                                    data-breatherem_e="{{this.breathe_rem_e}}" class="block_zh">舒張壓</div>
+                                <div id="{{this.ID}}_breathe_warn_value" data-breathewarn_s="{{this.breathe_warn_s}}"
+                                    data-breathewarn_e="{{this.breathe_warn_e}}" class="block_en"></div>
+                                <div class=" circle breathe" id="{{this.ID}}_js_breathe_color">
+                                    <div class="data_dis" id="{{this.ID}}_js_breathe_value"
+                                        name="Diastolic blood{{this.ID}}">200</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div id="{{this.ID}}_pressure_rem_value" data-pressurerem_s="{{this.pressure_rem_s}}"
+                                    data-pressurerem_e="{{this.pressure_rem_e}}" class="block_zh">收縮壓</div>
+                                <div id="{{this.ID}}_pressure_warn_value" data-pressurewarn_s="{{this.pressure_warn_s}}"
+                                    data-pressurewarn_e="{{this.pressure_warn_e}}" class="block_en"></div>
+                                <div class="circle breathe" id="{{this.ID}}_js_pressure_color">
+                                    <div class="data_dis" id="{{this.ID}}_js_pressure_value"
+                                        name="Systolic blood{{this.ID}}">86</div>
+                                </div>
+                            </div>
+                            <div class="block_text">
+                                <div id="{{this.ID}}_oxygen_rem_value" data-oxygenrem_s="{{this.oxygen_rem_s}}"
+                                    data-oxygenrem_e="{{this.oxygen_rem_e}}" class="block_zh">血氧</div>
+                                <div id="{{this.ID}}_oxygen_warn_value" data-oxygenwarn_s="{{this.oxygen_warn_s}}"
+                                    data-oxygenwarn_e="{{this.oxygen_warn_e}}" class="block_en"></div>
+                                <div class=" circle oxygen" id="{{this.ID}}_js_oxygen_color">
+                                    <span class="data_dis" id="{{this.ID}}_js_oxygen_value"
+                                        name="Blood oxygen{{this.ID}}">89</span>
+                                </div>
+                            </div>
+
+                            <div class="block_text">
+                                <div class="block_zh">電量</div>
+                                <div class="block_en"></div>
+                                <div class=" circle oxygen" id="{{this.ID}}_js_battery_color">
+                                    <span class="data_dis" id="{{this.ID}}_js_battery_value"
+                                        name="Battery{{this.ID}}">55</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    {{/each}}
+                    <div onclick="addition_dis()" class="inf_block">
+                        <img src="/img/plus.png" alt="error">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ==========彈出式設定警戒值==========-->
+        <form class="setting" id="js_setting">
+            <div class="set_pt_information">
+                <div class="set_pt_inf">
+                    <div class="set_block_zh">姓名：</div>
+                    <div class="set_block_data" id="js_setting_name"></div>
+                </div>
+                <div class="set_pt_inf">
+                    <div class="set_block_zh">編號：</div>
+                    <div class="set_block_data" id="js_setting_id"></div>
+                </div>
+            </div>
+            <div class="set_warning_block">
+                <div class="set_warning">
+                    <div class="set_block_zh">警示值更動項目
+                        <div class="set_block_en">Warning value change item</div>
+                    </div>
+                    <div class="chose_data_input">
+                        <select name="set_items" class="set_item" required />
+                        <option value="">請選擇</option>
+                        <option value="heart">心律 (Heart rate)</option>
+                        <option value="breathe">舒張壓 (Diastolic blood)</option>
+                        <option value="pressure">收縮壓 (Systolic blood)</option>
+                        <option value="oxygen">血氧 (Blood oxygen)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="set_warning">
+                    <div class="set_block_zh">中度警示值
+                        <div class="set_block_en">Medium Level</div>
+                    </div>
+                    <div class="data_input">
+                        <div class="dis_color set_orange"></div>
+                        <input id="remind_start" name="remind_start" type="text" placeholder="中度警示值下限" required>～
+                        <input id="remind_end" name="remind_end" type="text" placeholder="中度警示值上限" required>
+                    </div>
+                </div>
+                <div class="set_warning">
+                    <div class="set_block_zh">高度警示值
+                        <div class="set_block_en">Height Level</div>
+                    </div>
+                    <div class="data_input">
+                        <div class="dis_color set_red"></div>
+                        <input id="warn_start" name="warn_start" type="text" placeholder="高度警示值下限" required>～
+                        <input id="warn_end" name="warn_end" type="text" placeholder="高度警示值上限" required>
+                    </div>
+
+                </div>
+                <div id="set_value_error" class="set_error"></div>
+            </div>
+            <div class="confirm">
+                <button id="js_set_warn_form" class="but_confirm" type="button" onclick="check_warnvalue()">確認</button>
+                <button class="but_cancel" type="button" onclick="hid_setting()">取消</button>
+            </div>
+        </form>
+        <!--===========setting 介面==================== -->
+        <!--===========addition 新的用戶==================== -->
+        <form method="POST" action="pt_add" class="addition" id="js_addition">
+            <div class="add_pt_information">
+                <div class="add_pt_title">
+                    <div class="add_block_zh">新增病患</div>
+                </div>
+            </div>
+            <div class="add_pt_inf">
+                <div class="add_pt">
+                    <div class="add_block_zh">病患姓名
+                        <div class="add_block_en">Patient Name</div>
+                    </div>
+                    <div class="add_input">
+                        <input name="pt_name" type="text" required />
+                    </div>
+                </div>
+                <div class="add_pt">
+                    <div class="add_block_zh">病患性別
+                        <div class="add_block_en">Patient Gender</div>
+                    </div>
+                    <div class="add_input">
+                        <select name="pt_gender" class="sex" id="js_pt_sex" required />
+                        <option value="">請選擇</option>
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="add_pt">
+                    <div class="add_block_zh">身分證字號
+                        <div class="add_block_en">Patient ID</div>
+                    </div>
+                    <div class="add_input">
+                        <input class="css_pt_id" id="js_pt_ID" name="pt_ID" type="text" placeholder="預設密碼"
+                            maxlength="10" pattern="[A-Z]\d{9}" required />
+                    </div>
+
+                </div>
+                <div class="add_pt">
+                    <div class="add_block_zh">聯絡電話
+                        <div class="add_block_en">Contact Number</div>
+                    </div>
+                    <div class="add_input">
+                        <input name="pt_number" type="text" maxlength="10" pattern="09\d{2}\d{6}" required />
+                    </div>
+                </div>
+                <div class="add_pt">
+                    <div class="add_block_zh">聯絡信箱
+                        <div class="add_block_en">E-mail</div>
+                    </div>
+                    <div class="add_input">
+                        <input name="pt_email" type="email" required />
+                    </div>
+                </div>
+                <div class="add_pt">
+                    <div class="add_block_zh">綁定手環
+                        <div class="add_block_en">Bind device</div>
+                    </div>
+                    <div class="add_input">
+                        <select name="pt_MAC" class="MAC" id="js_pt_MAC" required />
+                        <option value="">請選擇</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <label class="pt_id_error" id="js_pt_id_error"></label>
+            <div class="add_confirm">
+                <button id="js_confirm" class="add_but_confirm" type="button" onclick="verification()">確認</button>
+                <button class="add_but_cancel" type="button" onclick="hid_addition()">取消</button>
+            </div>
+        </form>
+        <!--===========addition 新的用戶==================== -->
+        <!--====================chart圖表==================== -->
+        <div class="chart_div" id="js_chart">
+            <div class="chart_information">
+                <div class="chart_inf_left">
+                    <div class="chart_inf">
+                        <div class="chart_zh">姓名：</div>
+                        <div class="chart_data" id="js_chart_name"></div>
+                    </div>
+                    <div class="chart_inf">
+                        <div class="chart_zh">編號：</div>
+                        <div class="chart_data" id="js_chart_id"></div>
+                    </div>
+                </div>
+                <div class="chart_inf_exit">
+                    <button id="js_chart_exit" class="chart_exit" onclick="hid_chart()" value="destory"><img
+                            src="img/close.png" alt=""></button>
+                </div>
+            </div>
+            <div class="chart_display">
+                <div id="container_heart"></div>
+                <div id="container_diastolic"></div>
+                <div id="container_systolic"></div>
+                <div id="container_oxygen"></div>
+            </div>
+        </div>
+        <!--====================chart圖表==================== -->
+        <!--==================z-index隔層==========================-->
+        <div class="partition" id="js_partition"></div>
+        <!--==================z-index隔層==========================-->
+
+        <script src="javascripts/indexjs.js"></script>
+        <script src="javascripts/connect_mac.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    </div class="wrapper">
+</body>
