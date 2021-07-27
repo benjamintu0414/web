@@ -98,8 +98,8 @@ app.post('/pt_add', (req, res) => {
         host: 'smtp.gmail.com',
         service: 'Gmail',
         auth: {
-            user: 'benjamintu1514@gmail.com',
-            pass: 'benjamin8904145256'
+            user: 'xxxx',
+            pass: 'xxxx'
         }
     };
     const transporter = nodemailer.createTransport(hostmail);
